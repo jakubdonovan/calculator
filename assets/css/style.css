@@ -84,7 +84,6 @@ body {
   padding: 1.5rem;
   grid-column: 1/-1;
   word-wrap: break-word;
-  word-break: break-all;
 }
 .calculator .display .operation {
   font-size: 2rem;
