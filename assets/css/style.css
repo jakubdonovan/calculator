@@ -110,6 +110,9 @@ body {
   border-radius: 45%;
   cursor: pointer;
 }
+.calculator button:focus {
+  outline: none;
+}
 .calculator [data-equals] {
   height: 13rem;
   grid-row: span 2;

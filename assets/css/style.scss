@@ -139,6 +139,10 @@ body {
         height: 5.5rem;
         border-radius: 45%;
         cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     [data-equals] {
