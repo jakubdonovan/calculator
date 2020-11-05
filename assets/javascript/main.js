@@ -30,6 +30,7 @@ class Calculator {
     appendNumber(number){
         if (number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
+
     }
 
     chooseOperation(operation){
@@ -89,7 +90,12 @@ class Calculator {
     updateDisplay(){
         this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
 
-        
+        if (this.operation === '÷' && this.currentOperand === '0') {
+            this.currentOperandTextElement.style.fontSize = '2rem'
+            this.currentOperandTextElement.innerText = `Oops, you can't divide by 0. Clear and try again.`
+            calculator.clear()
+        }
+
         if(this.operation != null) {
             this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
             this.displayOperationTextElement.innerText = this.operation
